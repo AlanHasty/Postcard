@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var capturedMessage: UILabel!
+    @IBOutlet weak var toEmailAddress: UITextField!
+    @IBOutlet weak var messageToSend: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +25,9 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func sendPostcard(sender: UIButton) {
+        capturedMessage.text = messageToSend.text
+        messageToSend.resignFirstResponder()
+        capturedMessage.hidden = false
+    }
 }
-
