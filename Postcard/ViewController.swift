@@ -37,9 +37,9 @@ class ViewController: UIViewController {
         capturedMessage.hidden = false
 
         messageToSend.resignFirstResponder()
-
         toEmailAddress.text = ""
         messageToSend.text = ""
         
     }
+    
 }
