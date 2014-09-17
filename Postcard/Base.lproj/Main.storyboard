@@ -63,7 +63,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FOY-7f-wnJ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="275" y="147" width="80" height="80"/>
+                                    <rect key="frame" x="275" y="152" width="80" height="80"/>
                                 </variation>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="send to " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bJ-Im-lwa">
@@ -71,7 +71,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="235" width="339" height="30"/>
+                                    <rect key="frame" x="16" y="240" width="339" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="type your message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRD-V9-Tag">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="273" width="339" height="58"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeJ-uZ-uCf">
@@ -81,7 +89,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="147" width="241" height="52"/>
+                                    <rect key="frame" x="16" y="199" width="191" height="33"/>
                                 </variation>
                                 <connections>
                                     <action selector="sendPostcard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="00T-kS-iaM"/>
@@ -93,48 +101,52 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="339" height="72"/>
+                                    <rect key="frame" x="16" y="104" width="251" height="87"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="type your message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRD-V9-Tag">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8A-rG-axa">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20291601377935431" green="0.32064824733293251" blue="0.92108950407608692" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="273" width="339" height="58"/>
+                                    <rect key="frame" x="16" y="72" width="191" height="21"/>
                                 </variation>
-                            </textField>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="FOY-7f-wnJ"/>
                                 <exclude reference="9bJ-Im-lwa"/>
+                                <exclude reference="hRD-V9-Tag"/>
                                 <exclude reference="jeJ-uZ-uCf"/>
                                 <exclude reference="PtW-dM-wvP"/>
-                                <exclude reference="hRD-V9-Tag"/>
+                                <exclude reference="B8A-rG-axa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="FOY-7f-wnJ"/>
                                 <include reference="9bJ-Im-lwa"/>
+                                <include reference="hRD-V9-Tag"/>
                                 <include reference="jeJ-uZ-uCf"/>
                                 <include reference="PtW-dM-wvP"/>
-                                <include reference="hRD-V9-Tag"/>
+                                <include reference="B8A-rG-axa"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="capturedMessage" destination="PtW-dM-wvP" id="u2B-dd-Y27"/>
+                        <outlet property="messageFor" destination="B8A-rG-axa" id="EEI-rf-L5O"/>
                         <outlet property="messageToSend" destination="hRD-V9-Tag" id="llu-YZ-l43"/>
                         <outlet property="toEmailAddress" destination="9bJ-Im-lwa" id="2hz-lQ-OZB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245" y="144"/>
+            <point key="canvasLocation" x="1244.25" y="143.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pyD-Vl-vMz">

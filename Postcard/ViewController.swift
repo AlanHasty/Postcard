@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var toEmailAddress: UITextField!
     @IBOutlet weak var messageToSend: UITextField!
     
+    @IBOutlet weak var messageFor: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,5 +31,10 @@ class ViewController: UIViewController {
         capturedMessage.text = messageToSend.text
         messageToSend.resignFirstResponder()
         capturedMessage.hidden = false
+        messageFor.text = toEmailAddress.text
+        messageFor.hidden = false
+        toEmailAddress.text = ""
+        messageToSend.text = ""
+        
     }
 }
