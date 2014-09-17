@@ -29,10 +29,15 @@ class ViewController: UIViewController {
 
     @IBAction func sendPostcard(sender: UIButton) {
         capturedMessage.text = messageToSend.text
-        messageToSend.resignFirstResponder()
-        capturedMessage.hidden = false
         messageFor.text = toEmailAddress.text
+
+        capturedMessage.textColor = UIColor.redColor()
+        messageFor.textColor = UIColor.blueColor()
         messageFor.hidden = false
+        capturedMessage.hidden = false
+
+        messageToSend.resignFirstResponder()
+
         toEmailAddress.text = ""
         messageToSend.text = ""
         
